@@ -9,7 +9,7 @@ public class TransformaClave {
     
     long clv=0;
     
-   for (int j = 0; j < Math.min(clave.length(),10); j++){
+   for (int j = 0; j < Math.min(clave.length(),5); j++){
        
    
         clv= clv* 27 + (int)clave.charAt(j);
