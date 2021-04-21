@@ -4,7 +4,7 @@ package casarural;
 
 public class dispersion {
     
-  static final int M = 5;
+  static final int M = 512;
  static final double R = 0.618034;
  
     static int dispersion(long clv){

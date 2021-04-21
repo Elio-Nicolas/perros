@@ -13,7 +13,7 @@ public class CasaRural {
         
         
         Scanner sc= new Scanner(System.in);
-        casa_r arr [] =  new casa_r [ 5 ];
+        casa_r arr [] =  new casa_r [ 512 ];
         String clave;
         String poblacion;
         String direccion;
@@ -53,7 +53,12 @@ public class CasaRural {
                     
                     casa_r casa= new casa_r(clave,direccion,poblacion,numHabitacion,precio);
                     arr[disp]= casa;
-                    
+                    System.out.println("clave de dispercion:  "+disp);
+                    System.out.println("codigo: "+arr[disp].getCodigo());
+                    System.out.println("direccion: "+arr[disp].getDireccion());
+                    System.out.println("poblacion: "+arr[disp].getPoblacion());
+                    System.out.println("Numero de habitacion: "+arr[disp].getNumhabitacion());
+                    System.out.println("precio: "+arr[disp].getPrecio());
                 break;
                 
                 case 2:
@@ -78,7 +83,7 @@ public class CasaRural {
                 
                 case 3:
                     
-                     for(int i=0; i<=arr.length; i++){
+                     for(int i=0; i<=5; i++){
                         
                         System.out.println(" casa : "+arr[i].getDireccion());
                         System.out.println(" Clave: "+arr[i].getCodigo());
