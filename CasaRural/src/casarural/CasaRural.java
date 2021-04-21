@@ -8,12 +8,13 @@ import java.util.Scanner;
 
 public class CasaRural {
     
+    static final int TAMTABLA = 101;
     
     public static void main(String[] args) {
         
         
         Scanner sc= new Scanner(System.in);
-        casa_r arr [] =  new casa_r [ 512 ];
+        casa_r arr [] =  new casa_r [TAMTABLA];
         String clave;
         String poblacion;
         String direccion;
@@ -33,6 +34,17 @@ public class CasaRural {
             op=sc.nextInt();
            // sc.nextInt();
             
+            for(int i=0; i<=TAMTABLA ; i++){
+                
+                  arr[i].setCodigo(null);
+                  arr[i].setDireccion(null);
+                  arr[i].setNumhabitacion(0);
+                  arr[i].setPoblacion(null);
+                  arr[i].setPrecio(0.0);
+                  
+                }
+           
+           
             switch(op){
                 
                 case 1:
@@ -59,13 +71,14 @@ public class CasaRural {
                     System.out.println("poblacion: "+arr[disp].getPoblacion());
                     System.out.println("Numero de habitacion: "+arr[disp].getNumhabitacion());
                     System.out.println("precio: "+arr[disp].getPrecio());
+                    
                 break;
                 
                 case 2:
                     
                     System.out.println(" Ingrese clave que desea eliminar");
                     
-                    for(int i=0; i<=arr.length; i++){
+                    for(int i=0; i<=TAMTABLA; i++){
                         
                         System.out.println(" casa : "+arr[i].getDireccion());
                         System.out.println(" Clave: "+arr[i].getCodigo());
@@ -83,7 +96,7 @@ public class CasaRural {
                 
                 case 3:
                     
-                     for(int i=0; i<=5; i++){
+                     for(int i=0; i<=TAMTABLA; i++){
                         
                         System.out.println(" casa : "+arr[i].getDireccion());
                         System.out.println(" Clave: "+arr[i].getCodigo());
