@@ -31,20 +31,20 @@ public class CasaRural {
             System.out.println("  2- Eliminar casa ");
             System.out.println("  3- Buscar casa   ");
             op=sc.nextInt();
-            sc.nextInt();
+           // sc.nextInt();
             
             switch(op){
                 
                 case 1:
                     
                     System.out.println(" ingrese clave");
-                    clave= sc.nextLine();
+                    clave= sc.next();
                     System.out.println(" ingrese numero de habitacion");
                     numHabitacion= sc.nextInt();
                     System.out.println(" ingrese poblacion");
-                    poblacion= sc.nextLine();
+                    poblacion= sc.next();
                     System.out.println(" ingrese direccion");
-                    direccion= sc.nextLine();
+                    direccion= sc.next();
                     System.out.println(" ingrese precio");
                     precio= sc.nextDouble();
                     
