@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class CasaRural {
     
-    static final int TAMTABLA = 101;
+    static final int TAMTABLA = 7;    // tamaño con numero primo
     
     public static void main(String[] args) {
         
@@ -34,7 +34,7 @@ public class CasaRural {
             op=sc.nextInt();
            // sc.nextInt();
             
-            for(int i=0; i<=TAMTABLA ; i++){
+            for(int i=0; i<=TAMTABLA ; i++){   // Inicializa la tabla 
                 
                   arr[i].setCodigo(null);
                   arr[i].setDireccion(null);
@@ -63,8 +63,11 @@ public class CasaRural {
                     clv= TransformaClave.TransformaClave(clave);
                     disp=dispersion.dispersion(clv);
                     
+                    //constructor
                     casa_r casa= new casa_r(clave,direccion,poblacion,numHabitacion,precio);
                     arr[disp]= casa;
+                    
+                    //muestra el elemento creado
                     System.out.println("clave de dispercion:  "+disp);
                     System.out.println("codigo: "+arr[disp].getCodigo());
                     System.out.println("direccion: "+arr[disp].getDireccion());
