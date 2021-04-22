@@ -10,8 +10,13 @@ public class casa_r {
     private int numhabitacion;
     private Double precio;
     
-    casa_r(){
+    casa_r(){    //constructor para inicializar tabla
         
+        this.codigo=null;
+        this.direccion=null;
+        this.poblacion=null;
+        this.numhabitacion=0;
+        this.precio=0.0;
     }
     
     casa_r(String codigo,String direccion,String poblacion,int numhabitacion,Double precio){

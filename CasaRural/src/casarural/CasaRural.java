@@ -27,15 +27,9 @@ public class CasaRural {
         
           for(int i=0; i<TAMTABLA ; i++){   // Inicializa la tabla 
                 
-                 casa_r casa= new casa_r();
-           
-                  casa.setCodigo(null);
-                  casa.setDireccion(null);
-                  casa.setNumhabitacion(0);
-                  casa.setPoblacion(null);
-                  casa.setPrecio(0.0);
-                 // casa_r casa= new casa_r(clave,direccion,poblacion,numHabitacion,precio);
-                  arr[i]= casa;
+                 casa_r casa= new casa_r(); // crea un objeto con constructor sin parametros
+                 arr[i]= casa;              // arreglo de tipo casa con valores por defecto
+                  
                 }
            
         do{
@@ -91,15 +85,21 @@ public class CasaRural {
                 
                 case 2:
                     
-                    System.out.println(" Ingrese clave que desea eliminar");
+                    
+                    
+                    System.out.println(" casas y claves existentes");
+                    System.out.println("__________________________");
                     
                     for(int i=0; i<TAMTABLA; i++){
                         
+                        System.out.println(" ________________________________________");
                         System.out.println(" casa : " +arr[i].getDireccion());
                         System.out.println(" Clave de dispercion: "+arr[i].getCodigo());
+                        System.out.println(" ________________________________________");
                     }
                     
-                      disp=sc.nextInt();
+                    System.out.println(" Ingrese clave que desea eliminar");
+                    disp=sc.nextInt();
                     
                     for( int i=0;i<TAMTABLA;i++ ){
                         
@@ -120,23 +120,27 @@ public class CasaRural {
                     
                      for(int i=0; i<TAMTABLA; i++){
                         
-                       System.out.println(" Clave de dispercion: "+arr[i].getCodigo());
-                       
+                       System.out.println(" ___________________________");
+                       System.out.println(" Codigo: "+arr[i].getCodigo());
+                       System.out.println(" Clave de dispercion: "+i    );
+                       System.out.println(" ___________________________");
                     }
                      
-                     System.out.println(" ingrese codigo a buscar");
+                     System.out.println(" ingrese clave a buscar");
                      disp=sc.nextInt();
                      
                      for( int i=0;i<TAMTABLA;i++){
                          
                          if( i == disp){
-                             
-                          System.out.println("clave de dispercion:  "+disp);
+                          
+                          System.out.println("___________________________________________________");
+                          System.out.println("clave de dispercion: "+disp);
                           System.out.println("codigo: "+arr[disp].getCodigo());
                           System.out.println("direccion: "+arr[disp].getDireccion());
                           System.out.println("poblacion: "+arr[disp].getPoblacion());
                           System.out.println("Numero de habitacion: "+arr[disp].getNumhabitacion());
                           System.out.println("precio: "+arr[disp].getPrecio()); 
+                          System.out.println("____________________________________________________");
                           
                          }
                      }
