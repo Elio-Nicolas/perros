@@ -34,7 +34,7 @@ public class CasaRural {
             op=sc.nextInt();
            // sc.nextInt();
             
-            for(int i=0; i<=TAMTABLA ; i++){   // Inicializa la tabla 
+          /*  for(int i=0; i<=TAMTABLA ; i++){   // Inicializa la tabla 
                 
                   arr[i].setCodigo(null);
                   arr[i].setDireccion(null);
@@ -42,7 +42,7 @@ public class CasaRural {
                   arr[i].setPoblacion(null);
                   arr[i].setPrecio(0.0);
                   
-                }
+                }*/
            
            
             switch(op){
