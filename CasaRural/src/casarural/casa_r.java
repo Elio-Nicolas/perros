@@ -4,11 +4,15 @@ package casarural;
 
 public class casa_r {
    
-    private String codigo=null;
-    private String poblacion=null;
-    private String direccion=null;
-    private int numhabitacion=0;
-    private Double precio=0.0;
+    private String codigo;
+    private String poblacion;
+    private String direccion;
+    private int numhabitacion;
+    private Double precio;
+    
+    casa_r(){
+        
+    }
     
     casa_r(String codigo,String direccion,String poblacion,int numhabitacion,Double precio){
         
