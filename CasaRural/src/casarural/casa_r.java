@@ -1,6 +1,8 @@
 
 package casarural;
 
+import java.util.Scanner;
+
 
 public class casa_r {
    
@@ -9,25 +11,43 @@ public class casa_r {
     private String direccion;
     private int numhabitacion;
     private Double precio;
+    boolean estado;
     
-    casa_r(){    //constructor para inicializar tabla
+     public  casa_r () {
+         
+        estado = true ;
+       // asigna();
         
-        this.codigo=null;
-        this.direccion=null;
-        this.poblacion=null;
-        this.numhabitacion=0;
-        this.precio=0.0;
     }
     
-    casa_r(String codigo,String direccion,String poblacion,int numhabitacion,Double precio){
+      public  void  asigna () {
+              
+        Scanner sc= new Scanner(System.in);
+        System.out.println ( " INGRESE EL CODIGO (5 CARACTERES) " );
+        codigo = sc.next();
+         System.out.println ( " INGRESE LA POBLACION " );
+         poblacion = sc.next();
+        System.out.println ( " INGRESE LA DIRECCION " );
+         direccion = sc.next();
+        System.out.println ( " INGRESE NUMERO / S DE HABITACION " );
+         numhabitacion =sc.nextInt ();
+         System.out.println ( " INGRESE EL PRECIO POR DIA DE LA ESTADIA " );
+         precio = sc.nextDouble ();
+         
+         
+    }
+      
+       public  void  muestra () {
+           
+           
+          System.out.println ( " CASA RURAL: " +codigo);
+          System.out.println ( " NUMERO / S DE HABITACION: " + numhabitacion);
+          System.out.println ( " POBLACION DE LA CASA: " + poblacion);
+          System.out.println ( " DIRECCION DE LA CASA: " + direccion);
+          System.out.println ( " PRECIO POR DIA: " + precio);
         
-        this.codigo=codigo;
-        this.direccion=direccion;
-        this.poblacion=poblacion;
-        this.numhabitacion=numhabitacion;
-        this.precio=precio;
-        
-        }
+           
+    }
 
     public String getCodigo() {
         return codigo;
