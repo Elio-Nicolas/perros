@@ -103,7 +103,7 @@ public perro getcan(){
          
 }
     
-    public Elemento buscar(int codigo){
+    public perro buscar(int codigo){
         
       Elemento p = null;
       int posicion;
@@ -125,7 +125,7 @@ public perro getcan(){
         }
        }
       
-       return p;
+       return p.can;
 }
     
 }

@@ -35,10 +35,10 @@ public class perro {
         
     }
     
-    public void muestra (){
+    public void muestra (perro e){
         
         System.out.println(" Raza: "+raza);
-        System.out.println("Nombre: "+socio);
+        System.out.println("Codigo: "+socio);
         System.out.println("Edad: "+edad);
         System.out.println("Peso: "+peso);
         System.out.println("Color: "+color);
