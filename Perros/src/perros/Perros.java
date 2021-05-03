@@ -35,20 +35,36 @@ public class Perros {
                 break;
                 
                 case 2:
-                    
-                    System.out.print(" Ingrese codigo de perro que desea eliminar");
+                   
+                    try{
+                    System.out.print(" Ingrese codigo de perro que desea eliminar: ");
                     cod=sc.nextInt();
                     tabla.eliminar(cod);
+                    System.out.println(" Perro eliminado");
                     
+                    }
+                    
+                    catch( NullPointerException e){
+                        
+                     System.out.println(" Perro no encontrado");
+                     
+                    }
                 break;
                 
                 case 3:
-                    
-                    System.out.print(" Ingrese codigo de perro que desea buscar");
+                 
+                  try{  
+                      
+                    System.out.print(" Ingrese codigo de perro que desea buscar: ");
                     cod=sc.nextInt();
                     per=tabla.buscar(cod);
                     per.muestra(per);
-                    
+                          }
+                  catch( NullPointerException e){
+                      
+                     System.out.println(" Perro no encontrado ");
+                      
+                  }
             }
     }while(op!=0);
     

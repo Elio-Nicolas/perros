@@ -10,15 +10,7 @@ public class perro {
     private int edad;
     private double peso;
     private String color;
-    private boolean estado;
-    
     Scanner sc= new Scanner(System.in);
-    
-    public perro(){
-       
-        estado=true;
-        
-    }
     
     public void asigna(){
         

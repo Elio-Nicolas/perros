@@ -7,7 +7,7 @@ public class TablaDispersa {
  static final double R = 0.618034;   
  static final int M = 101;
  private Elemento [] tabla;
- private int numElementos;
+  int numElementos;
 
 public class Elemento{
     
@@ -42,12 +42,14 @@ public perro getcan(){
 }
     
     
-    public void TablaDispersaEnlazada() {
+public void TablaDispersaEnlazada() {
         
-     tabla = new Elemento[M];
+    tabla = new Elemento[M];
+     
      for (int k = 0; k < M; k++)
-     tabla[k] = null;
-     numElementos = 0;
+         
+       tabla[k] = null;
+       numElementos = 0;
      
 }
     
@@ -120,13 +122,13 @@ public perro getcan(){
            if (p.getcan().getSocio() != codigo){
                
            p = null;
-           
-         }
+             
+           }
         }
-       }
+      }
       
        return p.can;
-}
+ }
     
 }
 
