@@ -1,6 +1,8 @@
 
 package perros;
 
+import java.util.Scanner;
+import java.lang.NullPointerException;
 
 public class TablaDispersa {
     
@@ -8,7 +10,8 @@ public class TablaDispersa {
  static final int M = 101;
  private Elemento [] tabla;
   int numElementos;
-
+ Scanner sc= new Scanner(System.in);
+ 
 public class Elemento{
     
    perro can;
@@ -66,9 +69,16 @@ public void TablaDispersaEnlazada() {
      
     }
     
-    public void eliminar(int codigo){
+    public void eliminar(){
         
       int posicion;
+      int codigo;
+      
+      try{
+          
+      
+      System.out.print(" Ingrese codigo a eliminar");
+      codigo=sc.nextInt();
       posicion = dispersion(codigo);
       Elemento actual;
       Elemento anterior=null;
@@ -90,25 +100,35 @@ public void TablaDispersaEnlazada() {
              
              System.out.println("No se encuentra en la tabla el socio "+ codigo);
          
-         else //if (conforme (actual.getSocio())) //se retira el nodo{
+         else 
              
-         if (anterior == null) // primer nodo
+         if (anterior == null) 
              
            tabla[posicion] = actual.sgte;
 
-//Tablas de dispersión, funciones hash 363
-
          else
-         anterior.sgte = actual.sgte;
-         actual = null;
-         numElementos--;
+             
+          anterior.sgte = actual.sgte;
+          actual = null;
+          numElementos--;
          
-}
+   }
+   catch( NullPointerException e){
+                        
+                     System.out.println(" Perro no encontrado");
+                     
+                    }   
+    } 
     
-    public perro buscar(int codigo){
+    
+ public perro buscar(){
         
       Elemento p = null;
       int posicion;
+      int codigo;
+           
+      System.out.println(" Ingrese codigo de perro a buscar");
+      codigo=sc.nextInt();
       posicion = dispersion(codigo);
       
       if (tabla[posicion] != null){
@@ -127,10 +147,6 @@ public void TablaDispersaEnlazada() {
         }
       }
       
-       return p.can;
+     return p.can;
  }
-    
 }
-
-    
-

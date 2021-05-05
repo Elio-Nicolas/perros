@@ -29,12 +29,18 @@ public class perro {
     
     public void muestra (perro e){
         
+        try{
+        
         System.out.println(" Raza: "+raza);
         System.out.println("Codigo: "+socio);
         System.out.println("Edad: "+edad);
         System.out.println("Peso: "+peso);
         System.out.println("Color: "+color);
+        }
         
+        catch( NullPointerException er){
+            
+        }
     }
 
     public String getRaza() {

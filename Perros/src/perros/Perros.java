@@ -2,6 +2,7 @@
 package perros;
 
 import java.util.Scanner;
+import java.lang.NullPointerException;
 
 public class Perros {
 
@@ -11,10 +12,10 @@ public class Perros {
         
         Scanner sc= new Scanner(System.in);
         TablaDispersa tabla= new TablaDispersa();
-        tabla.TablaDispersaEnlazada();
+        tabla.TablaDispersaEnlazada();             //Inicializa tabla con elementos en Null.
         int op;
-        int cod;
         perro per=new perro();
+        
         do{
             
             System.out.println("       MENU        ");
@@ -36,35 +37,20 @@ public class Perros {
                 
                 case 2:
                    
-                    try{
-                    System.out.print(" Ingrese codigo de perro que desea eliminar: ");
-                    cod=sc.nextInt();
-                    tabla.eliminar(cod);
-                    System.out.println(" Perro eliminado");
-                    
-                    }
-                    
-                    catch( NullPointerException e){
-                        
-                     System.out.println(" Perro no encontrado");
-                     
-                    }
+                    tabla.eliminar();
+                  
                 break;
                 
                 case 3:
-                 
-                  try{  
-                      
-                    System.out.print(" Ingrese codigo de perro que desea buscar: ");
-                    cod=sc.nextInt();
-                    per=tabla.buscar(cod);
+                    
+                try{    
+                    per=tabla.buscar();
                     per.muestra(per);
-                          }
-                  catch( NullPointerException e){
+                }   
+                catch( NullPointerException e){
                       
-                     System.out.println(" Perro no encontrado ");
-                      
-                  }
+                 System.out.println(" Perro no encontrado ");
+                }
             }
     }while(op!=0);
     
